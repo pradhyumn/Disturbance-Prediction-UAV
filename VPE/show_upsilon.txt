@@ -1,0 +1,18 @@
+# Set the output to a png file
+set terminal png size 1000,500
+
+# The file we'll write to
+set output 'upsilon.png'
+
+
+# the style
+set style line 1  lc rgb 'blue' lt 1 lw 1
+set style line 2  lc rgb 'green' lt 1 lw 1
+set style line 3  lc rgb 'red' lt 1 lw 1
+
+# The labels
+set xlabel 'Time (s)' 
+set ylabel "upsilon"
+
+# plot the graphic
+plot 'varphi.txt' using 1:5 with lines ls 1 title "upsilon x",'varphi.txt' using 1:6 with lines ls 2 title "upsilon y",'varphi.txt' using 1:7 with lines ls 3 title "upsilon z"

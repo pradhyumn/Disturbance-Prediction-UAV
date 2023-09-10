@@ -1,0 +1,18 @@
+# Set the output to a png file
+set terminal png size 1000,500
+
+# The file we'll write to
+set output 'xi.png'
+
+
+# the style
+set style line 1  lc rgb 'blue' lt 1 lw 1
+set style line 2  lc rgb 'green' lt 1 lw 1
+set style line 3  lc rgb 'red' lt 1 lw 1
+
+# The labels
+set xlabel 'Time (s)' 
+set ylabel "xi"
+
+# plot the graphic
+plot 'xi and phi.txt' using 1:3 with lines ls 1 title "xi x",'xi and phi.txt' using 1:4 with lines ls 2 title "xi y",'xi and phi.txt' using 1:5 with lines ls 3 title "xi z"
